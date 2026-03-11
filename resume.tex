@@ -1,0 +1,213 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\itemsep}{-2pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Jacob Hunter} \\ \vspace{1pt}
+    Tucson, AZ | \vspace{1pt} TS/SCI Clearance \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 916-259-6898 ~ \href{mailto:jacobguinhunter@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{jacobguinhunter@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/jacobghunter/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/jacobghunter/}}  ~
+    \href{https://github.com/jacobghunter}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/jacobghunter}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Rincon Research Corperation}{Feb 2025 - Present}
+      {Engineer/Scientist 1}{Tucson, AZ}
+      \resumeItemListStart
+      
+        \item[] \hspace*{-12pt}\textbf{Racecar} / High-Throughput Data Streaming Platform
+        \resumeItem{Modernized build pipeline using Vite and Nginx to serve pre-compressed assets, eliminating server-side compression overhead.}
+        \resumeItem{Implemented lazy loading and code splitting based on bundle analysis, significantly reducing initial payload size.}
+        \resumeItem{Resolved rendering bottlenecks using Chrome DevTools, achieving a 4x reduction in FCP/LCP. Eliminated Layout Shift (CLS) by preloading assets and refactoring blocking Vue.js watchers.}
+        \resumeItem{Modernized the legacy interface by conducting a feature audit with technical leads to consolidate redundant utilities. Implemented a unified UX pattern that reduced cognitive load and streamlined navigation for non-technical users.}
+        \resumeItem{Architected a robust GitLab CI/CD pipeline to enforce the new performance standards, integrating automated Lighthouse regression testing and containerized (Docker) builds.}
+    
+        \item[] \hspace*{-12pt}\textbf{Hercules} / AI Object Detection Pipeline
+        \resumeItem{Engineered an automated incremental learning pipeline to process continuous data streams for real-time model refinement. Implemented a Python ETL workflow to ingest, normalize, and convert tens of thousands of daily images into COCO format.}
+        \resumeItem{Architected a scalable Inter-Process Communication (IPC) layer using Redis to orchestrate asynchronous training workflows, ensuring high availability and zero data loss during ingestion spikes.}
+        \resumeItem{Developed a real-time command dashboard using Vue.js and ECharts to visualize live training metrics, model convergence, and model lineage. Used PostgreSQL for persistent metadata storage and performance tracking of incrementally trained models.}
+
+        \item[] \hspace*{-12pt}\textbf{SkySnare} / Drone Defense System
+        \resumeItem{Leading the software and web infrastructure evolution, managing the Django/React stack to ensure reliable ingestion and visualization of telemetry data from new Software-Defined Radio (SDR) sources.}
+        \resumeItem{Orchestrating the software integration for on-site university deployments, coordinating directly with campus security teams to interface the detection platform with their existing network infrastructure.}
+        \resumeItem{Collaborating on R\&D initiatives to detect non-broadcast drones using WiFi Channel State Information (CSI), expanding the system's capabilities beyond standard Remote ID compliance.}
+      \resumeItemListEnd    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{\underline{Chess Convolutional Neural Netowork}~\href{https://github.com/jacobghunter/chess-ai/tree/main/cnn}} $|$ \emph{PyTorch}}{Dec 2024}
+          \resumeItemListStart
+            \resumeItem{Engineered a high-performance data pipeline to process millions of chess positions, utilizing HDF5 for dynamic, out-of-core data loading to bypass VRAM limitations and accelerate training.}
+            \resumeItem{Designed a custom Convolutional Neural Network (CNN) architecture integrating Residual Blocks (inspired by AlphaZero) and a specialized multi-component loss function (Piece Selection + Move Location) to optimize move prediction accuracy.}
+            \resumeItem{Implemented a novel data transformation strategy, generating training labels weighted by Stockfish engine evaluations (centipawn loss) and enforcing rule compliance via a move-masking layer to zero out illegal moves during inference.}
+            \resumeItem{Optimized the training dataset by standardizing perspective (White-to-move only) and utilizing bitboard representations (12x8x8), significantly reducing the dimensionality required for model convergence on resource-constrained hardware.}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+        \resumeProjectHeading
+          {\textbf{\underline{SkySnare}~\href{https://github.com/jacobghunter/SkySnare}}- Rincon Research $|$ \emph{Django, React.js, AWS}}{Aug 2024}
+          \resumeItemListStart
+            \resumeItem{Co-Architected a distributed FAA Remote ID drone tracking system, utilizing a network of hardware nodes for signal triangulation and a central base station for visual verification.}
+            \resumeItem{Engineered a real-time React frontend deployed on AWS (EC2), implementing WebSocket connections for live flight path mapping and a historical playback engine for flight analysis.}
+            \resumeItem{Built the backend control plane using Django, designing robust APIs for telemetry ingestion and orchestrating data storage for millions of flight data points in SQLite/Postgres.}
+            \resumeItem{Delivered a comprehensive \underline{"Tech Talk"} ~ \href{https://github.com/jacobghunter/SkySnare/blob/main/Final_Presentation.pdf} to company leadership, presenting the architectural challenges and successful implementation of the multi-node mesh network.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+    \resumeSubHeadingListEnd
+\vspace{-2pt}
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Javascript/Typescript, HTML/CSS, SCSS, SQL} \\
+     \textbf{Developer Tools}{: VS Code, Eclipse, Google Cloud Platform, Android Studio} \\
+     \textbf{Technologies/Frameworks}{: Vue, React, Tailwind, Nginx, Caddy, AWS, Postgres, SQLite, Firebase, Django, Docker, Grafana, GitLab CI/CD, PyTorch, Linux, AI-Augmented Development (Claude/Gemini CLI)} \\
+    }}
+ \end{itemize}
+ \vspace{-14pt}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Nevada, Reno}{Dec 2024}
+      {B.S. in Computer Science [Honors], Minor in Mathematics}{Reno, NV}
+  \resumeSubHeadingListEnd
+
+
+\end{document}
