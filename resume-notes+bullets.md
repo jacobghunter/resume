@@ -90,3 +90,8 @@ Context:
 - Designed a custom Convolutional Neural Network (CNN) architecture integrating Residual Blocks (inspired by AlphaZero) and a specialized multi-component loss function (Piece Selection + Move Location) to optimize move prediction accuracy.
 - Implemented a novel data transformation strategy, generating training labels weighted by Stockfish engine evaluations (centipawn loss) and enforcing rule compliance via a move-masking layer to zero out illegal moves during inference.
 - Optimized the training dataset by standardizing perspective (White-to-move only) and utilizing bitboard representations (12x8x8), significantly reducing the dimensionality required for model convergence on resource-constrained hardware.
+
+
+## Keyboard
+
+Built using ergogen for the layout, kicad for the wiring and PCB design, freecad for the case/plate design, and zmk for the firmware. Using klipper + orca for my 3d printer. PCB printed and hand soldered all components, using a nice! view display on the left, 5000mah batteries in both sides, two rotary encoders, a tps43 touchpad and choc v1 switches to keep it low profile.
