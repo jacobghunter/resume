@@ -135,28 +135,30 @@
 %-----------EXPERIENCE-----------
 \section{Work Experience}
   \resumeSubHeadingListStart
+
     \resumeSubheading
       {Rincon Research Corporation}{Feb 2025 - Present}
       {Engineer/Scientist 1}{Tucson, AZ}
       \resumeItemListStart
-
+      
         \item[] \hspace*{-12pt}\textbf{Racecar} / High-Throughput Data Streaming Platform
         \resumeItem{Achieved a 4x reduction in Core Web Vitals (FCP/LCP) and eliminated Layout Shift (CLS) by optimizing the Vite/Nginx build pipeline, refactoring blocking Vue.js watchers, and implementing application-wide code splitting.}
-        \resumeItem{Built a natural language data query interface integrated into the Racecar platform, enabling LLM-driven dataset retrieval with multi-modal visualizations including geospatial mapping, a vector image gallery, and persistent chat history.}
+        \resumeItem{Built an AI-powered search engine web app integrated into the Racecar platform, contributing to system-wide design decisions for LLM-driven data retrieval with multi-modal visualizations including geospatial mapping and a vector image gallery with persistent chat history.}        
         \resumeItem{Owned a ground-up visual redesign of the entire Racecar web application in Quasar, overhauling every screen to deliver a modern, accessible interface with responsive layouts, tab-navigable flows, and developer keybinds, significantly reducing friction for non-technical users.}
         \resumeItem{Architected a GitLab CI/CD pipeline integrating automated Lighthouse regression testing and containerized Docker builds to enforce Core Web Vitals performance standards across deployments.}    
-
-        \vspace{4pt}
+        
         \item[] \hspace*{-12pt}\textbf{Hercules} / AI Object Detection Pipeline
         \resumeItem{Engineered an automated incremental learning pipeline processing tens of thousands of daily images, implementing a Python workflow to ingest, normalize, and convert continuous data streams into COCO format for real-time model refinement.}
         \resumeItem{Architected a scalable Inter-Process Communication (IPC) layer using Redis to orchestrate the asynchronous data ingestion and training workflow, ensuring high availability and zero data loss during throughput spikes.}
         \resumeItem{Built a real-time command dashboard in Vue.js and ECharts visualizing live training metrics, model convergence, and lineage, backed by PostgreSQL for persistent metadata storage and performance tracking across model iterations.}
-
-        \vspace{4pt}
-        \item[] \hspace*{-12pt}\textbf{SkySnare} / Drone Defense System
-        \resumeItem{Extended the Django/React stack to handle ingestion and real-time visualization of telemetry data from new SDR sources, maintaining system reliability as hardware configurations evolved.}
-        \resumeItem{Coordinated web server and data pipeline deployment for an on-site university integration, interfacing with campus security teams to connect the detection platform to existing network infrastructure.}
-    \resumeItemListEnd    
+        
+        \item[] \hspace*{-12pt}\textbf{SkySnare} / Drone Detection System \textit{(Internship $\rightarrow$ Full-Time)}
+        \resumeItem{Co-architected and built a distributed FAA Remote ID drone tracking system, delivering a multi-node mesh network and real-time visual verification.}
+        \resumeItem{Built the backend control plane in Django and a real-time React frontend deployed on AWS (EC2), utilizing WebSockets for live flight path mapping and developing a historical playback engine for flight analysis.}
+        \resumeItem{Orchestrated a scalable telemetry ingestion pipeline, reliably storing continuous, real-time flight data in PostgreSQL while integrating new Software-Defined Radio (SDR) sources as hardware evolved.}
+        \resumeItem{Defining data storage and web server integration requirements for an upcoming university deployment, delivering technical demonstrations to campus stakeholders to secure project agreements.} 
+        \resumeItem{Delivered a company-wide \underline{"Tech Talk"} ~ \href{https://github.com/jacobghunter/SkySnare/blob/main/Final_Presentation.pdf} on the system's architecture and implementation, securing continued project funding and leadership buy-in.}
+        \resumeItemListEnd    
   \resumeSubHeadingListEnd
 \vspace{-16pt}
 
@@ -168,19 +170,18 @@
       \resumeProjectHeading
           {\textbf{\underline{Chess Convolutional Neural Network}~\href{https://github.com/jacobghunter/chess-ai/tree/main/cnn}} $|$ \emph{PyTorch}}{Dec 2024}
           \resumeItemListStart
+            \resumeItem{Engineered a high-performance data pipeline to process millions of chess positions, utilizing HDF5 for dynamic, out-of-core data loading to bypass VRAM limitations and accelerate training.}
             \resumeItem{Designed a custom Convolutional Neural Network (CNN) architecture integrating Residual Blocks (inspired by AlphaZero) and a specialized multi-component loss function (Piece Selection + Move Location) to optimize move prediction accuracy.}
-            \resumeItem{Enforced move legality during inference via a masking layer zeroing illegal moves, and weighted training labels using Stockfish centipawn evaluations to bias the model toward stronger play.}
-            \resumeItem{Engineered a high-performance data pipeline to process millions of chess positions, leveraging HDF5 for dynamic batch loading to bypass VRAM limitations and accelerate training.}
+            \resumeItem{Implemented a novel data transformation strategy, generating training labels weighted by Stockfish engine evaluations (centipawn loss) and enforcing rule compliance via a move-masking layer to zero out illegal moves during inference.}
             \resumeItem{Optimized the training dataset by standardizing perspective (White-to-move only) and utilizing bitboard representations (12x8x8), significantly reducing the dimensionality required for model convergence on resource-constrained hardware.}
           \resumeItemListEnd 
           \vspace{-13pt}
         \resumeProjectHeading
-          {\textbf{\underline{SkySnare}~\href{https://github.com/jacobghunter/SkySnare}}- Rincon Research $|$ \emph{Django, React.js, AWS}}{Aug 2024}
+          {\textbf{\underline{Custom Wireless Split Keyboard}} $|$ \emph{KiCad, FreeCAD, ZMK, Hardware}}{Present}
           \resumeItemListStart
-            \resumeItem{Co-architected a distributed FAA Remote ID drone tracking system, utilizing a network of hardware nodes to extend detection range and a central base station for signal processing and visual verification.}
-            \resumeItem{Engineered a real-time React frontend deployed on AWS (EC2), implementing WebSocket connections for live flight path mapping and a historical playback engine for flight analysis.}
-            \resumeItem{Built the backend control plane using Django, designing APIs for telemetry ingestion and orchestrating data storage for millions of flight data points in SQLite/Postgres.}
-            \resumeItem{Delivered a \underline{"Tech Talk"} ~ \href{https://github.com/jacobghunter/SkySnare/blob/main/Final_Presentation.pdf} to company leadership, presenting the architectural challenges and successful implementation of the multi-node mesh network.}
+            \resumeItem{Engineered a low-profile, ergonomic split keyboard from scratch, utilizing Ergogen for layout generation, KiCad for PCB routing, and FreeCAD for designing the 3D-printable chassis.}
+            \resumeItem{Configured ZMK firmware for a complex peripheral array including dual rotary encoders and a Nice!View display, with ongoing custom driver work to integrate a TPS43 touchpad over wireless split architecture.}
+            \resumeItem{Executed the end-to-end hardware manufacturing process, 3D printing components via Klipper/OrcaSlicer and hand-soldering microcontrollers, surface-mount components, and Choc V1 switches.}
           \resumeItemListEnd
           \vspace{-13pt}
     \resumeSubHeadingListEnd
@@ -192,8 +193,8 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, JavaScript/TypeScript, HTML/CSS, SCSS, SQL} \\
-     \textbf{Technologies/Frameworks}{: Vue, Quasar, React, Tailwind, Nginx, Caddy, AWS, Postgres, SQLite, Firebase, Django, Docker, GitLab CI/CD, PyTorch, Linux} \\
+     \textbf{Languages}{: Python, Javascript/Typescript, HTML/CSS, SCSS, SQL} \\
+     \textbf{Technologies/Frameworks}{: Vue, Quasar, React, Tailwind, Nginx, Caddy, AWS, Postgres, SQLite, Firebase, Django, Docker, Grafana, GitLab CI/CD, PyTorch, Linux} \\
     }}
  \end{itemize}
  \vspace{-14pt}
